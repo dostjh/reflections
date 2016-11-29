@@ -1,0 +1,3 @@
+*** What happens when you initialize a repository? Why do you need to do it?
+
+It sets up the directory to act as a repository including the hidden .git file that controls versioning information. Without this, we won't be able to run source control on our directory.
