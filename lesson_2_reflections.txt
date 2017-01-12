@@ -23,3 +23,7 @@ They allow me to more easily see which branches know about which commits and whi
 *** What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
 
 Merging two branches together results in all the child changes from both branches being represented in the merged branch. It is represented in the diagram to make it clear which changes will actually exist within the branch. Side note: The changes in the log are represented in timestamp order.
+
+*** What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+Automatic merges save time when Git can reasonably determine what the intent of the merge is. It also prevents human error. Manual merges allow the user to take control of the merge, but Git helps by indicating where it could not resolve a conflict.
