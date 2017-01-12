@@ -1,3 +1,25 @@
 *** What happens when you initialize a repository? Why do you need to do it?
 
 It sets up the directory to act as a repository including the hidden .git file that controls versioning information. Without this, we won't be able to run source control on our directory.
+
+*** How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+It is a cached memory version of the files to be commited whereas the repository is data about the file states at various points and the working directory is the file state on disk.
+It is valuable as an intermediary stage where you can submit some changes to some files to the repository and not the entire working directory. This allows you to make logical submissions.
+
+*** How can you use the staging area to make sure you have one commit per logical change?
+
+Only add those files to the staging area which you wish to have changed.
+
+*** What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+Experimental features: Experiment will not mess with master branch and can be safely iterated on.
+Bug fixes: Can be tested to ensure that they actually fix the bug and don't introduce unexpected bugs.
+
+*** How do the diagrams help you visualize the branch structure?
+
+They allow me to more easily see which branches know about which commits and which commits are unreachable.
+
+*** What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+
+Merging two branches together results in all the child changes from both branches being represented in the merged branch. It is represented in the diagram to make it clear which changes will actually exist within the branch. Side note: The changes in the log are represented in timestamp order.
