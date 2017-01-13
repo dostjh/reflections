@@ -1,1 +1,3 @@
-*** When would you want to...
+*** When would you want to use a remote respository rather than keeping all your work local?
+
+The benefit of a remote respository is it creates a back up of your work and allows others to more easily collaborate with you and vice versa.
