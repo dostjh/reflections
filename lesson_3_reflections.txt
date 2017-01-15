@@ -5,3 +5,11 @@ The benefit of a remote respository is it creates a back up of your work and all
 *** Why might you want to always pull changes manually rather than having Git automatically stay up-to-date with your remote repository?
 
 You may end up accepting changes that don't work with what you've written. Manual merges allow you to assess the merging of the content when you're ready to make the next commit of meaningful work.
+
+*** Describe the differences between forks, clones, and branches. When would you use one instead of another?
+
+Forks allow the user to modify another user's code base without actually editing their repository. It also gives them credit because the fork knows where it was forked from and broadcasts that.
+
+Clones allow the user to modify another user's code base without actually editing their repository. However, git has no knowledge of where it came from, so you aren't giving the originator credit nor are you able to easily integrate their future changes into your repository.
+
+Branches are copies of a code base within a repository. In this case, you are directly editing the respository, rather than a copy of it.
