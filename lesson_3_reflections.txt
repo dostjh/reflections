@@ -17,3 +17,7 @@ Branches are copies of a code base within a repository. In this case, you are di
 *** What is the benefit of having a copy of the last known state of the remote stored locally?
 
 You can work offline as if working with the remote. However, when you are back online, you will need to make sure you resolve any conflicts that happened in the meantime.
+
+*** How would you collaborate without using Git or GitHub? What would be easier, and what would be harder?
+
+We would have to manually pass files around or use a common shared location to edit in. It would be easier in that there would be less overhead and fewer manual processes. It would be harder to actually track changes and to review each others' work.
