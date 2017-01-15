@@ -13,3 +13,7 @@ Forks allow the user to modify another user's code base without actually editing
 Clones allow the user to modify another user's code base without actually editing their repository. However, git has no knowledge of where it came from, so you aren't giving the originator credit nor are you able to easily integrate their future changes into your repository.
 
 Branches are copies of a code base within a repository. In this case, you are directly editing the respository, rather than a copy of it.
+
+*** What is the benefit of having a copy of the last known state of the remote stored locally?
+
+You can work offline as if working with the remote. However, when you are back online, you will need to make sure you resolve any conflicts that happened in the meantime.
