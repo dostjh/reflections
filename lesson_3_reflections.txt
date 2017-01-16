@@ -25,3 +25,33 @@ We would have to manually pass files around or use a common shared location to e
 *** When would you want to make changes in a separate branch rather than directly in master? What benefits does each approach have?
 
 Making changes in master means you don't have to deal with merging as much and the overhead of maintaining separate branches. However, if you are working on dangerous code, you want to make sure that you are isolating the master branch from those changes so they can be properly reviewed. Working directly in master is also not ideal for collaboration since everyone will be trying to work on the same code out of the same branch instead of being forced to resolve their changes outside of the branch.
+
+??? Not a reflection, but here's what I did on the final lesson to set up a remote directly to the source repository so that my master would stay in sync with the source repository.
+
+Jeremiah (master) english $ git remote -v
+origin  https://github.com/dostjh/create-your-own-adventure (fetch)
+origin  https://github.com/dostjh/create-your-own-adventure (push)
+Jeremiah (master) english $ git remote add upstream https://github.com/udacity/create-your-own-adventure
+Jeremiah (master) english $ git remote -v
+origin  https://github.com/dostjh/create-your-own-adventure (fetch)
+origin  https://github.com/dostjh/create-your-own-adventure (push)
+upstream        https://github.com/udacity/create-your-own-adventure (fetch)
+upstream        https://github.com/udacity/create-your-own-adventure (push)
+Jeremiah (master) english $ git pull upstream master
+From https://github.com/udacity/create-your-own-adventure
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> upstream/master
+Already up-to-date.
+Jeremiah (master) english $ git merge master uda
+Updating e69545c..73b765e
+Fast-forward
+ english/marshmallow.md   | 2 +-
+ english/wisely/wisely.md | 5 +++++
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+ create mode 100644 english/wisely/wisely.md
+Jeremiah (master) english $ git push origin uda
+Everything up-to-date
+Jeremiah (master) english $ git checkout uda
+Switched to branch 'uda'
+Jeremiah (uda) english $ git merge master uda
+Already up-to-date.
